@@ -24,21 +24,18 @@
     <!-- Page content -->
     <div id="content-main">
         <div class="padding">
-            <a id="settings-button" href="../DataBinding/DataBinding.html"></a>
-
-            <p style="margin-left: 40px; margin-bottom: 40px;">
-                <strong>Add visualization content here.</strong>
-                For example:
+            
+            <p>
+                <textarea id="query" style="width: 100%" rows="10">START n=node:node_auto_index(name='Neo')
+MATCH p=n-[r:KNOWS*]-m
+RETURN m, length(p)</textarea>
+            </p>
+            
+            <p>
+                <input id="url" type="url" value="http://localhost:7070"/>
+                <button id="execute">Execute</button>
             </p>
 
-            <div id="data-display">
-                <!-- This div will be replaced with data, loaded from the document -->
-                Loading...
-            </div>
-
-            <p style="margin-top: 50px;">
-                <a target="_blank" href="http://go.microsoft.com/fwlink/?LinkId=276813">Find more samples online...</a>
-            </p>
         </div>
     </div>
 </body>
