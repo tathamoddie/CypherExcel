@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CypherExcel", "CypherExcel\CypherExcel.csproj", "{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CypherExcelWeb", "CypherExcelWeb\CypherExcelWeb.csproj", "{ACEB706E-EF15-4007-A145-332E6F0C6043}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF8B6DF2-4079-4CE8-AA9C-9266CFC5B66A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF39003B-E2F6-474B-A9CD-DCA48D144B5C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ACEB706E-EF15-4007-A145-332E6F0C6043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEB706E-EF15-4007-A145-332E6F0C6043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEB706E-EF15-4007-A145-332E6F0C6043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACEB706E-EF15-4007-A145-332E6F0C6043}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
