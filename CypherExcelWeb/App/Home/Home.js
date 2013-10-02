@@ -16,7 +16,7 @@
         });
     };
 
-    function executeQuery() {
+    function executeQuery(query, url) {
         var sampleHeaders = [['m','length(p)']];
         var sampleRows = [
             ['(5 {name:"Morpheus"})', 1],
