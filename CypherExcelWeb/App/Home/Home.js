@@ -31,8 +31,8 @@
                 var tableData = new Office.TableData(result.data, result.columns);
                 pushTableToPage(tableData);
             })
-            .fail(function(result) {
-                app.showNotification(result.statusText);
+            .fail(function() {
+                app.showNotification('Unable to load data', 'There was an error with the network request');
             })
             .always(function() {
                 $('.disable-while-executing').prop('disabled', false);

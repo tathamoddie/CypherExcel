@@ -3,17 +3,18 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ContentApp">
   <Id>4d344c0d-ca33-40c4-b935-450d3c02bc4f</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Tatham</ProviderName>
+  <ProviderName>Tatham Oddie</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="CypherExcel" />
-  <Description DefaultValue="CypherExcel"/>
+  <DisplayName DefaultValue="Neo4j Cypher" />
+  <Description DefaultValue="Execute Neo4j Cypher queries right from within Excel, allowing powerful adhoc data analysis"/>
+<IconUrl DefaultValue="~remoteAppUrl/Images/Icon.png" />
   <Capabilities>
     <Capability Name="Workbook" />
   </Capabilities>
   <DefaultSettings>
     <SourceLocation DefaultValue="~remoteAppUrl/App/Home/Home.html" />
     <RequestedWidth>400</RequestedWidth>
-    <RequestedHeight>400</RequestedHeight>
+    <RequestedHeight>270</RequestedHeight>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>

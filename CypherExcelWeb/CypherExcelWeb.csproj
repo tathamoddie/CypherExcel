@@ -80,6 +80,7 @@
     <Content Include="Content\Office.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Close.png" />
+    <Content Include="Images\Icon.png" />
     <Content Include="Images\Settings.png" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
