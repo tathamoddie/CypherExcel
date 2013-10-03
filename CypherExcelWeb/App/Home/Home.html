@@ -26,9 +26,8 @@
         <div class="padding">
             
             <p>
-                <textarea id="query" style="width: 100%" rows="10">START n=node:node_auto_index(name='Neo')
-MATCH p=n-[r:KNOWS*]-m
-RETURN m, length(p)</textarea>
+                <textarea id="query" style="width: 100%" rows="10">START n=node(*), r=relationship(*)
+RETURN count(distinct n), count(distinct r)</textarea>
             </p>
             
             <p>
