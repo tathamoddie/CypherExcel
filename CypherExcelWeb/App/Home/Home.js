@@ -53,9 +53,6 @@
                             asyncResult.value.setDataAsync(tableData);
                         }
                     });
-                    //var existingTableData = asyncResult.value;
-                    //existingTableData.headers = tableData.headers;
-                    //existingTableData.rows = tableData.rows;
                 } else {
                     tryEstablishNewTableOnPage(tableData);
                 }
