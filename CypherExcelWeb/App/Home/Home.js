@@ -17,6 +17,7 @@
     };
 
     function executeQuery(query, url) {
+        app.closeNotification();
         $('.disable-while-executing').prop('disabled', true);
         var cypherEndpoint = url + '/db/data/cypher';
         $.ajax({
