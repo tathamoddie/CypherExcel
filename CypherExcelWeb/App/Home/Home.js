@@ -40,6 +40,30 @@
     }
 
     function pushTableToPage(tableData) {
+        Office.context.document.getSelectedDataAsync(
+            Office.CoercionType.Table,
+            function (asyncResult) {
+                // The current selection points to a data table that we can update
+                if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
+                    // Get a binding to the table
+                    Office.context.document.bindings.addFromSelectionAsync(Office.BindingType.Table, { id: 'CypherExcel' }, function (asyncResult) {
+                        if (asyncResult.status == Office.AsyncResultStatus.Failed) {
+                            app.showNotification('Could not insert data', 'We found a table at the current selection, but couldn\'t update it');
+                        } else {
+                            asyncResult.value.setDataAsync(tableData);
+                        }
+                    });
+                    //var existingTableData = asyncResult.value;
+                    //existingTableData.headers = tableData.headers;
+                    //existingTableData.rows = tableData.rows;
+                } else {
+                    tryEstablishNewTableOnPage(tableData);
+                }
+            }
+        );
+    }
+
+    function tryEstablishNewTableOnPage(tableData) {
         Office.context.document.setSelectedDataAsync(tableData,
             function (asyncResult) {
                 if (asyncResult.status === Office.AsyncResultStatus.Failed) {
