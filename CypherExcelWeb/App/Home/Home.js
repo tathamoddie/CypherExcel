@@ -9,23 +9,36 @@
         $(document).ready(function () {
             app.initialize();
             $('#execute').click(function() {
-                var query = $('#query').text();
-                var url = $('#url').text();
+                var query = $('#query').val();
+                var url = $('#url').val();
                 executeQuery(query, url);
             });
         });
     };
 
     function executeQuery(query, url) {
-        var sampleHeaders = [['m','length(p)']];
-        var sampleRows = [
-            ['(5 {name:"Morpheus"})', 1],
-            ['(4 {name:"Trinity"})', 2],
-            ['(3 {name:"Cypher"})', 2],
-            ['(2 {name:"Agent Smith"})', 3]
-        ];
+        $('.disable-while-executing').prop('disabled', true);
+        var cypherEndpoint = url + '/db/data/cypher';
+        $.ajax({
+                type: 'POST',
+                url: cypherEndpoint,
+                accepts: 'application/json',
+                dataType: 'json',
+                data: { 'query': query }
+            })
+            .success(function (result) {
+                var tableData = new Office.TableData(result.data, result.columns);
+                pushTableToPage(tableData);
+            })
+            .fail(function(result) {
+                app.showNotification(result.statusText);
+            })
+            .always(function() {
+                $('.disable-while-executing').prop('disabled', false);
+            });
+    }
 
-        var tableData = new Office.TableData(sampleRows, sampleHeaders);
+    function pushTableToPage(tableData) {
         Office.context.document.setSelectedDataAsync(tableData,
             function (asyncResult) {
                 if (asyncResult.status === Office.AsyncResultStatus.Failed) {
